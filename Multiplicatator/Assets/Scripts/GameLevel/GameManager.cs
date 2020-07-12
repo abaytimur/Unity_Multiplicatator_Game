@@ -24,8 +24,11 @@ public class GameManager : MonoBehaviour
 
     private PlayerManager _playerManager;
 
+    private AdmobManager _admobManager;
+    
     private void Awake()
     {
+        _admobManager = Object.FindObjectOfType<AdmobManager>();
         _playerManager = Object.FindObjectOfType<PlayerManager>();
     }
 
@@ -61,6 +64,8 @@ public class GameManager : MonoBehaviour
     {
         _playerManager.changeRotation = true;
         DisplayTheQuestion();
+        
+        _admobManager.ShowBanner();
     }
 
     private void SetFirstQuestionNumber()

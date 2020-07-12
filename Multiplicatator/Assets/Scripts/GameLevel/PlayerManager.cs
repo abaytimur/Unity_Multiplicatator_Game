@@ -60,6 +60,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    // Ana menüde ayarlanan PlayerPref sayesinde oyun sesini açıp kapattım
+    // Ancak bunu her ses efekti için kodda tek tek yapmış oldum
+    // Daha büyük projelerde sorun çıkaracağı için daha verimli bir yol bulmam gerekiyor
     private void ShootBullet()
     {
         if (PlayerPrefs.GetInt("SoundMute") == 1)
